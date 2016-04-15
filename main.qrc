@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/fitInWindow.png</file>
+        <file>icons/move.png</file>
+        <file>icons/normal.png</file>
+        <file>icons/zoomOut.png</file>
+        <file>icons/about.png</file>
+        <file>icons/back.png</file>
+        <file>icons/close.png</file>
+        <file>icons/exit.png</file>
+        <file>icons/front.png</file>
+        <file>icons/left.png</file>
+        <file>icons/open.png</file>
+        <file>icons/optim.png</file>
+        <file>icons/right.png</file>
+        <file>icons/save.png</file>
+        <file>icons/setOrigin.png</file>
+        <file>icons/setTarget.png</file>
+        <file>icons/showcar.png</file>
+        <file>icons/showline.png</file>
+        <file>icons/startMapStudy.png</file>
+        <file>icons/startNavi.png</file>
+        <file>icons/stopMapStudy.png</file>
+        <file>icons/stopNavi.png</file>
+        <file>icons/zoomin.png</file>
+        <file>icons/leftBack.PNG</file>
+        <file>icons/leftFront.PNG</file>
+        <file>icons/NaviMode.png</file>
+        <file>icons/rightBack.PNG</file>
+        <file>icons/rightFront.PNG</file>
+        <file>icons/studymode.png</file>
+    </qresource>
+</RCC>

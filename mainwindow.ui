@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>724</width>
+    <height>445</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>工具栏</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionMove"/>
+   <addaction name="actionFit"/>
+   <addaction name="actionNormal"/>
+   <addaction name="separator"/>
+   <addaction name="actionStartStudy"/>
+   <addaction name="actionStopStudy"/>
+   <addaction name="actionLeft"/>
+   <addaction name="actionRight"/>
+   <addaction name="actionBack"/>
+   <addaction name="actionLeftFront"/>
+   <addaction name="actionRightFront"/>
+   <addaction name="actionLeftBack"/>
+   <addaction name="actionRightBack"/>
+   <addaction name="separator"/>
+   <addaction name="actionStartNavi"/>
+   <addaction name="actionStopNavi"/>
+   <addaction name="actionInitCarPos"/>
+   <addaction name="actionSetTarget"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>724</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>工作模式</string>
+     </property>
+     <addaction name="actionMapStudyMode"/>
+     <addaction name="actionNavigationMode"/>
+    </widget>
+    <addaction name="actionOpen"/>
+    <addaction name="actionClose"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="menu"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_MapStart">
+    <property name="title">
+     <string>地图学习</string>
+    </property>
+    <addaction name="actionStartStudy"/>
+    <addaction name="actionStopStudy"/>
+    <addaction name="separator"/>
+    <addaction name="actionLeft"/>
+    <addaction name="actionRight"/>
+    <addaction name="actionFront"/>
+    <addaction name="actionBack"/>
+    <addaction name="separator"/>
+    <addaction name="actionLeftFront"/>
+    <addaction name="actionRightFront"/>
+    <addaction name="actionLeftBack"/>
+    <addaction name="actionRightBack"/>
+   </widget>
+   <widget class="QMenu" name="menu_Navigation">
+    <property name="title">
+     <string>自动导航</string>
+    </property>
+    <addaction name="actionStartNavi"/>
+    <addaction name="actionStopNavi"/>
+    <addaction name="separator"/>
+    <addaction name="actionSetTarget"/>
+    <addaction name="separator"/>
+    <addaction name="actionInitCarPos"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>关于</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menu_View">
+    <property name="title">
+     <string>视图</string>
+    </property>
+    <addaction name="actionMove"/>
+    <addaction name="actionZoomIn"/>
+    <addaction name="actionZoomOut"/>
+    <addaction name="separator"/>
+    <addaction name="actionFit"/>
+    <addaction name="actionNormal"/>
+    <addaction name="separator"/>
+    <addaction name="actionShowCar"/>
+    <addaction name="actionShowLine"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_View"/>
+   <addaction name="menu_MapStart"/>
+   <addaction name="menu_Navigation"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/open.png</normaloff>:/icons/icons/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开地图...</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/close.png</normaloff>:/icons/icons/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>关闭地图...</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/exit.png</normaloff>:/icons/icons/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/about.png</normaloff>:/icons/icons/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于...</string>
+   </property>
+  </action>
+  <action name="actionZoomIn">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/zoomin.png</normaloff>:/icons/icons/zoomin.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="actionZoomOut">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/zoomOut.png</normaloff>:/icons/icons/zoomOut.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="actionFit">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/fitInWindow.png</normaloff>:/icons/icons/fitInWindow.png</iconset>
+   </property>
+   <property name="text">
+    <string>适合窗口</string>
+   </property>
+  </action>
+  <action name="actionNormal">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/normal.png</normaloff>:/icons/icons/normal.png</iconset>
+   </property>
+   <property name="text">
+    <string>实际大小</string>
+   </property>
+  </action>
+  <action name="actionMove">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/move.png</normaloff>:/icons/icons/move.png</iconset>
+   </property>
+   <property name="text">
+    <string>移动</string>
+   </property>
+  </action>
+  <action name="actionShowCar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/showcar.png</normaloff>:/icons/icons/showcar.png</iconset>
+   </property>
+   <property name="text">
+    <string>显示小车</string>
+   </property>
+  </action>
+  <action name="actionShowLine">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/showline.png</normaloff>:/icons/icons/showline.png</iconset>
+   </property>
+   <property name="text">
+    <string>显示移动轨迹</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/save.png</normaloff>:/icons/icons/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存地图...</string>
+   </property>
+  </action>
+  <action name="actionStartNavi">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/startNavi.png</normaloff>:/icons/icons/startNavi.png</iconset>
+   </property>
+   <property name="text">
+    <string>开始导航</string>
+   </property>
+  </action>
+  <action name="actionStartStudy">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/startMapStudy.png</normaloff>:/icons/icons/startMapStudy.png</iconset>
+   </property>
+   <property name="text">
+    <string>开始学习</string>
+   </property>
+  </action>
+  <action name="actionStopStudy">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/stopMapStudy.png</normaloff>:/icons/icons/stopMapStudy.png</iconset>
+   </property>
+   <property name="text">
+    <string>结束学习</string>
+   </property>
+  </action>
+  <action name="actionSetTarget">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/setTarget.png</normaloff>:/icons/icons/setTarget.png</iconset>
+   </property>
+   <property name="text">
+    <string>设置目的地</string>
+   </property>
+  </action>
+  <action name="actionStopNavi">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/stopNavi.png</normaloff>:/icons/icons/stopNavi.png</iconset>
+   </property>
+   <property name="text">
+    <string>结束导航</string>
+   </property>
+  </action>
+  <action name="actionLeft">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/left.png</normaloff>:/icons/icons/left.png</iconset>
+   </property>
+   <property name="text">
+    <string>左转</string>
+   </property>
+  </action>
+  <action name="actionRight">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/right.png</normaloff>:/icons/icons/right.png</iconset>
+   </property>
+   <property name="text">
+    <string>右转</string>
+   </property>
+  </action>
+  <action name="actionFront">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/front.png</normaloff>:/icons/icons/front.png</iconset>
+   </property>
+   <property name="text">
+    <string>前进</string>
+   </property>
+  </action>
+  <action name="actionBack">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/back.png</normaloff>:/icons/icons/back.png</iconset>
+   </property>
+   <property name="text">
+    <string>后退</string>
+   </property>
+  </action>
+  <action name="actionLeftFront">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/leftFront.PNG</normaloff>:/icons/icons/leftFront.PNG</iconset>
+   </property>
+   <property name="text">
+    <string>左前</string>
+   </property>
+  </action>
+  <action name="actionRightFront">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/rightFront.PNG</normaloff>:/icons/icons/rightFront.PNG</iconset>
+   </property>
+   <property name="text">
+    <string>右前</string>
+   </property>
+  </action>
+  <action name="actionLeftBack">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/leftBack.PNG</normaloff>:/icons/icons/leftBack.PNG</iconset>
+   </property>
+   <property name="text">
+    <string>左后</string>
+   </property>
+  </action>
+  <action name="actionRightBack">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/rightBack.PNG</normaloff>:/icons/icons/rightBack.PNG</iconset>
+   </property>
+   <property name="text">
+    <string>右后</string>
+   </property>
+  </action>
+  <action name="actionInitCarPos">
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/setOrigin.png</normaloff>:/icons/icons/setOrigin.png</iconset>
+   </property>
+   <property name="text">
+    <string>初始化小车位置</string>
+   </property>
+  </action>
+  <action name="actionMapStudyMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/studymode.png</normaloff>:/icons/icons/studymode.png</iconset>
+   </property>
+   <property name="text">
+    <string>地图学习模式</string>
+   </property>
+  </action>
+  <action name="actionNavigationMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="main.qrc">
+     <normaloff>:/icons/icons/NaviMode.png</normaloff>:/icons/icons/NaviMode.png</iconset>
+   </property>
+   <property name="text">
+    <string>导航模式</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="main.qrc"/>
+ </resources>
+ <connections/>
+</ui>
